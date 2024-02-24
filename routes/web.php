@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $title = 'Template Starter Laravel';
+
+    return view('welcome', ['title'=> $title]);
+});
+
+Route::get('/about', function () {
+    return view('subpages.about');
 });
